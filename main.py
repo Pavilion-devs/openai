@@ -22,12 +22,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-MODEL_NAME = os.getenv("MODEL_NAME")
+MODEL_NAME = "gpt-3.5-turbo"
 
 llm = ChatOpenAI(
     openai_api_key = OPENAI_API_KEY,
     temperature = 0.5,
-    model_name = MODEL_NAME
+    model_name="gpt-3.5-turbo",
 )
  
 app = FastAPI()
@@ -118,7 +118,7 @@ async def get_ai_response(user_message: UserMessage, response_format: str):
     role = user_message.role
     username = user_message.username
 
-    if user_input.lower() == "oofoto777":
+    if user_input.lower() == "feedback":
         feedback = overall_feedback(conversation_history)
         custom_data = {"feedback": feedback, "status": 200}
         return JSONResponse(content=custom_data)
@@ -126,19 +126,16 @@ async def get_ai_response(user_message: UserMessage, response_format: str):
     user_message = HumanMessage(content=user_input)
     conversation_history.append(user_message)
 
-    try:
-        ai_response = handle_conversation_analysis(user_input)
-    except HTTPException:
-        result = conversation({
-        "input": user_input,
-        "history": conversation_history,
-        "category": categories,
-        "scenario_tag": scenario_tag,
-        "role": role,
-        "user_name": username,
-        })
+    result = conversation({
+    "input": user_input,
+    "history": conversation_history,
+    "category": categories,
+    "scenario_tag": scenario_tag,
+    "role": role,
+    "user_name": username,
+    })
 
-        ai_response = result['response']
+    ai_response = result['response']
 
     if response_format == "text":
         ai_message = ChatMessage(role="system", content=ai_response)
