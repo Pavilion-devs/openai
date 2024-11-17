@@ -22,12 +22,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-MODEL_NAME = "gpt-3.5-turbo"
+MODEL_NAME = os.getenv("MODEL_NAME")
 
 llm = ChatOpenAI(
     openai_api_key = OPENAI_API_KEY,
     temperature = 0.5,
-    model_name="gpt-3.5-turbo",
+    model_name=MODEL_NAME
 )
  
 app = FastAPI()
