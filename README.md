@@ -20,6 +20,22 @@ Welcome to the AI documentation for the Irawo project. This document provides an
 
 The Irawo project aims to revolutionize social skills development through AI-driven realistic conversations. Leveraging Azure OpenAI Service and Langchain, our platform provides users with a virtual social coach for interactive learning.
 
+## Key Features:
+
+1. Conversation Generation:
+    - AI-driven chatbot for role-playing conversations
+    - Customizable parameters: category, role, and scenario tags for realistic settings
+    - Enhances social interaction and adaptability
+
+2. Virtual Guide:
+    - Real-time signals and prompts to navigate conversations
+    - Encourages active listening and responsive communication
+
+3. Overall Feedback:
+    - Comprehensive assessment of user performance
+    - Identifies areas for improvement in maintaining context and effective communication
+
+
 ## AI Services
 
 ### Azure OpenAI Service
