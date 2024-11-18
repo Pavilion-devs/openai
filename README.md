@@ -58,13 +58,11 @@ https://platform.openai.com/account/api-keys))
       ```
    * Create a `.env` file in the root directory with the following environment variables:
       ```
-      OPENAI_API_KEY=[YOUR_OPEN
-AI_API_KEY]
+      OPENAI_API_KEY=[YOUR_OPENAI_API_KEY]
       MODEL_NAME=[YOUR_OPENAI_MODEL_NAME]
       luis_endpoint=[YOUR_LUIS_ENDPOINT]
       luis_key=[YOUR_LUIS_API_KEY]
-      deployment_name_luis=[YOUR_LUIS_DEPLOYMENT_
-NAME]
+      deployment_name_luis=[YOUR_LUIS_DEPLOYMENT_NAME]
       POSITIVE_THRESHOLD=0.05
       NEGATIVE_THRESHOLD=-0.05
       speechkey=[YOUR_SPEECH_API_KEY]
