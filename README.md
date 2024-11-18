@@ -43,6 +43,33 @@ AI components are deployed using Azure services, ensuring scalability and reliab
 
 We implement monitoring systems to track model performance and user interactions. Regular evaluations help refine models and enhance the overall user experience.
 
+**Getting Started:**
+
+1. **Prerequisites:**
+   * Python 3.7 or higher
+   * An OpenAI API key ([https://platform.openai.com/account/api-keys](
+https://platform.openai.com/account/api-keys))
+   * A LUIS subscription ([https://azure.microsoft.com/en-us/products/cognitive-services/language-understanding](https://azure.microsoft.com/en-us/products/cognitive-services/language-understanding))
+
+2. **Setup:**
+   * Install the required packages:
+      ```bash
+      pip install -r requirements.txt
+      ```
+   * Create a `.env` file in the root directory with the following environment variables:
+      ```
+      OPENAI_API_KEY=[YOUR_OPEN
+AI_API_KEY]
+      MODEL_NAME=[YOUR_OPENAI_MODEL_NAME]
+      luis_endpoint=[YOUR_LUIS_ENDPOINT]
+      luis_key=[YOUR_LUIS_API_KEY]
+      deployment_name_luis=[YOUR_LUIS_DEPLOYMENT_
+NAME]
+      POSITIVE_THRESHOLD=0.05
+      NEGATIVE_THRESHOLD=-0.05
+      speechkey=[YOUR_SPEECH_API_KEY]
+      speechregion=[YOUR_SPEECH_REGION]
+      ```
 ## References
 
 - [Azure OpenAI Documentation](https://docs.microsoft.com/en-us/azure/openai/)
