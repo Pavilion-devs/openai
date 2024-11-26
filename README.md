@@ -47,7 +47,7 @@ Azure OpenAI Service serves as the backbone of our conversation generation. We u
 Langchain plays a crucial role in enhancing the interactive capabilities of our virtual social coach. It contributes to the conversation flow, ensuring realistic dialogues and dynamic user interactions.
 
 ## Finetuning 
- The openAI model is being finetuned to generate a more human-like conversation with users. More than 10,000 amount of data is being streamlined for diversity and relevance to real-world conversations. This has enabled personalized conversations in real world settings.
+ The openAI model is being finetuned to generate a more human-like conversation with users. More than 10,000 amount of quality data is being streamlined for diversity and relevance to real-world conversations. This has enabled personalized conversations with users in real world settings.
 
 
 ## Integration with Frontend and Backend
